@@ -6,15 +6,13 @@
 }
 
 a,
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-    margin: 0;
-}
-
+h6,
 ul {
     margin: 0;
     padding-left: 0;
@@ -33,12 +31,24 @@ button {
 
 img {
     display: block;
+    max-width:100%; 
+    height:auto;
 }
 
 
+
 body {
-    font-family: 'Releway',Roboto;
-    color: #212121;
+	margin: 0; /* 1 */
+	font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji'; /* 2 */
 }
 
 .list {
@@ -50,21 +60,20 @@ body {
 }
 
 .container {
-    width: 100%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid red;
 }
 
 
 /*------------------------------------HEADER---------------------------------------*/
 
 .header {
-    padding-top: 33px;
-    padding-bottom: 33px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 25px;
 }
 .header > .container {
     display: flex;
@@ -83,7 +92,7 @@ body {
 }
 
 .header-logo{ 
-    margin-right: 93px;
+    margin-right: 50px;
 }
 .header-logo {
     font-family: 'Raleway';
@@ -161,11 +170,11 @@ background-color: #2196f3;
 }
 
 .hero {
-    background-color:  #2F303A;
+background-color:  #2F303A;
+padding: 200px 200px; 
 }
 
 .hero-content {
-padding: 200px 280px; 
 text-align: center;
 margin-left: auto;
 margin-right: auto;
@@ -178,6 +187,9 @@ font-weight: 900;
 font-size: 44px;
 line-height: 1.36;
 letter-spacing: 0.06em;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
 text-transform: uppercase;
 margin-bottom: 30px;
 max-width: 696px;
@@ -191,7 +203,7 @@ color: #FFFFFF;
     
 }
 .mix-list {
-    border: 1px solid #5c5a5a;
+    display: flex;
 }
 
 .mix-item {
@@ -203,6 +215,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.03em;
 text-transform: uppercase;
+margin-bottom: 10px;
 color: #212121;
 
 }
@@ -228,8 +241,8 @@ font-size: 36px;
 line-height: 1.16;
 text-align: center;
 letter-spacing: 0.03em;
-padding-top: 0px;
-padding-bottom: 50px;
+margin-top: 0px;
+margin-bottom: 50px;
 color: #212121;
 }
 
@@ -241,6 +254,13 @@ color: #212121;
 }
 
 /*------------------------------------TEAM---------------------------------------*/
+.team {
+padding-top: 94px;
+padding-bottom: 0px;
+background-color:  #F5F4FA;
+}
+
+
 .team-titel {
 font-family: 'Roboto',sans-serif;
 font-weight: 700;
@@ -248,11 +268,15 @@ font-size: 36px;
 line-height: 1.16;
 text-align: center;
 letter-spacing: 0.03em;
-padding-top: 0px;
-padding-bottom: 50px;
+margin-top: 0px;
+margin-bottom: 50px;
 color: #212121;
 }
 
+.team-wrapper {
+padding-top: 30px;
+padding-bottom: 30px;
+}
 
 .team-name {
 font-weight: 500;
@@ -260,6 +284,7 @@ font-size: 16px;
 line-height: 1.18;
 text-align: center;
 letter-spacing: 0.03em;
+margin-bottom: 10px;
 color: #212121;
 }
 
@@ -277,28 +302,26 @@ color: #212121;
 
  .team-item {
      width: calc((100% - 60px) /3);
+     border-radius: 0 0 0 0;
+     background-color: #ffffff;
  }
 /*-----------------CONTACTS------------------*/
 
 
 
 
-.conacts-address {
-    font-style: normal;
-}
-
-
-
 /*------------------PORTFOLIO.HTML------------------*/
 
 .hero-two {
-    padding-top: 31px;
+    padding-top: 94px;
     padding-bottom: 94px;
 }
 
 .hero-menu-list {
     display: flex;
     gap: 8px;
+    justify-content: center; 
+    margin-bottom: 50px; 
 }
 
 .hero-two-list{
@@ -308,10 +331,10 @@ color: #212121;
 }
 .hero-two-item {
     width: calc((100% - 60px) / 3);
+   /* background-color: #EEEEEE; */
 }
 
 .hero-two-list{ 
-    padding-top: 34px;
     padding-bottom: 0px;
 }
 
@@ -322,6 +345,7 @@ line-height: 1.62;
 text-align: center;
 letter-spacing: 0.03em;
 color: #212121;
+background-color: #F5F4FA;
 }
 .hero-two-btn:hover,
 .hero-two-btn:focus {
@@ -329,12 +353,19 @@ background-color: #2196F3;
 color: #FFFFFF;
 }
 
-
+.hero-two-w {
+    padding: 20px 24px 20px 24px;
+    border-left: 24px;
+    border-right: 24px; 
+    border-bottom: 20px;
+    
+}
 .hero-two-title {
 font-weight: 700;
 font-size: 18px;
 line-height: calc(36 / 18);
 letter-spacing: 0.06em;
+margin-bottom: 9px;
 color: #212121;
 }
 
@@ -348,6 +379,14 @@ color: #757575;
 
 
 /*-----------------CONTACTS------------------*/
+.conacts {
+padding-top: 94px;
+padding-bottom: 60px;
+}
+    
+.conacts-address {
+    font-style: normal;
+}
 
 .conacts-address {
     font-style: normal;
@@ -366,6 +405,7 @@ margin-right: auto;*/
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    margin-bottom: 20px;
     color: #2196f3;
 }
 .conacts span {
@@ -377,6 +417,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: calc(24 /14);
 letter-spacing: 0.03em;
+margin-bottom: 9px;
 color: #FFFFFF;
 }
 .conacts-map:hover,
@@ -389,6 +430,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: calc(24 /14);
 letter-spacing: 0.03em;
+margin-bottom: 9px;
 color: rgba(255, 255, 255, 0.6);
 }
 .mail-link:hover,
@@ -397,11 +439,12 @@ color: var(--accent-color);
 }
 
 .tel-link{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24 /14);
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
+font-weight: 400;
+font-size: 14px;
+line-height: calc(24 /14);
+letter-spacing: 0.03em;
+margin-bottom: 0px;
+color: rgba(255, 255, 255, 0.6);
 }
 .tel-link:hover,
 .tel-link:focus {
