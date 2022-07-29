@@ -40,17 +40,8 @@ img {
 
 
 body {
-	margin: 0; /* 1 */
-	font-family: 'Releway',Roboto
-		system-ui,
-		-apple-system, /* Firefox supports this but not yet `system-ui` */
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji'; /* 2 */
+	margin: 0;
+	font-family: 'Releway',Roboto ;
 }
 
 .list {
@@ -344,6 +335,7 @@ color: #212121;
 .hero-two-item {
     width: calc((100% - 60px) / 3);
     height: 404px;
+    width: 370px;
    /* background-color: #EEEEEE; */
 }
 
@@ -417,7 +409,9 @@ padding-bottom: 60px;
     font-style: normal;
 }
 
-
+.conacts-item:not(:last-child) { 
+    margin-bottom: 9px;
+} 
 .conacts-logo {
     font-family: 'Raleway';
     font-weight: 700;
